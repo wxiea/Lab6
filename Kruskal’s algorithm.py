@@ -13,7 +13,7 @@ def kruskal(G):
     E = [(G[u][v], u, v) for u in G for v in G[u]]
     T = set()
     C = {u:u for u in G}
-    for _, u, v in sorted(E):
+    for u, v in sorted(E):
         if find(C, u) != find(C, v):
             T.add((u, v))
             union(u, v)
